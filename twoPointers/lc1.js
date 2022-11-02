@@ -5,4 +5,17 @@
 
 function pair_with_target_sum(arr, targetSum) {
   // TODO: Write code here
+  const numsMap = {};
+  for (let p = 0; p < arr.length; p++) {
+    const currentMapVal = numsMap[arr[p]];
+
+    if (currentMapVal >= 0) {
+      return [currentMapVal, p];
+    } else {
+      const numberToFind = targetSum - arr[p];
+      numsMap[numberToFind] = p;
+    }
+  }
+
+  return null;
 }
