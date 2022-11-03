@@ -3,6 +3,15 @@
 
 // Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
+/*
+Solution Using HashMaps:
+  - Create a hashmap (or object)
+  - Loop and check if the current value is in the hashmap
+  - If no, we determine the "pairing" for the number and insert it and it's index in the hashmap
+  - If yes, we return the index of the paired number (value) and the current index we are on
+  - For edge cases, return null
+*/
+
 function pair_with_target_sum(arr, targetSum) {
   // TODO: Write code here
   const numsMap = {};
