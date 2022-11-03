@@ -14,17 +14,20 @@ Solution Using HashMaps:
 
 function pair_with_target_sum(arr, targetSum) {
   // TODO: Write code here
-  const numsMap = {};
+  const numsMap = {}; // Create an empty hashmap
   for (let p = 0; p < arr.length; p++) {
-    const currentMapVal = numsMap[arr[p]];
+    // We check if the current value at p exists already inside the numsMap
+    const currentMapVal = numsMap[arr[p]]; // Capture inside a variable for reusability
 
+    // Check if the value exists in the numsMap, else we get back undefined
     if (currentMapVal >= 0) {
-      return [currentMapVal, p];
+      return [currentMapVal, p]; // If it exists, then return the value and index
     } else {
+      // If it doesn't exist (undefined), then generate a new numberToFind
       const numberToFind = targetSum - arr[p];
-      numsMap[numberToFind] = p;
+      numsMap[numberToFind] = p; // Insert new number and it's index in the hashmap
     }
   }
 
-  return null;
+  return null; // No solution exists
 }
