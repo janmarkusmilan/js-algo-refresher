@@ -4,6 +4,23 @@
 
 // The flag of the Netherlands consists of three colors: red, white and blue; and since our input array also consists of three different numbers that is why it is called Dutch National Flag problem.
 
+/*
+Sort the array in place (don't use the .sort function)
+If it is sorted or edge case: return the array (do nothing)
+
+Two pointers (beginning and end of array)
+Loop through the array
+If statement for 0, 1 and 2
+Keep all the 0s to the left side of the array
+Keep all the 2s to the right side of the array
+Swap two elements (define temp variable, set the array element equal to the next array element, set the next array element to the temp)
+No return value
+
+[2, 1, 1, 0, 1]
+-> [1, 1, 1, 0, 2]
+-> [0, 1, 1, 1, 2]
+*/
+
 const dutch_flag_sort = function (arr) {
   // TODO: Write your code here
   let leftPtr = 0;
