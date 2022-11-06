@@ -6,4 +6,26 @@
 
 const dutch_flag_sort = function (arr) {
   // TODO: Write your code here
+  let leftPtr = 0;
+  let rightPtr = arr.length - 1;
+
+  let i = 0;
+  while (i <= rightPtr) {
+    if (arr[i] === 0) {
+      const temp = arr[i];
+      arr[i] = arr[leftPtr];
+      arr[leftPtr] = temp;
+
+      leftPtr++;
+      i++;
+    } else if (arr[i] === 1) {
+      i++;
+    } else {
+      const temp2 = arr[i];
+      arr[i] = arr[rightPtr];
+      arr[rightPtr] = temp2;
+
+      rightPtr--;
+    }
+  }
 };
