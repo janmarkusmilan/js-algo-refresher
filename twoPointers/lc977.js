@@ -1,6 +1,16 @@
 // Problem Statement #
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
+// Brute Force Solution
+// -----
+// function make_squares(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i] * arr[i];
+//   }
+//   arr.sort((a, b) => a - b);
+//   return arr;
+// }
+
 function make_squares(arr) {
   // TODO: Write code here
   let res = Array(arr).fill(Infinity);
