@@ -1,6 +1,13 @@
 // Problem Statement #
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
+/*
+First Thoughts (Brute Force):
+  - Loop through the array
+  - Square the input after each iteration (if we create a new array, then just insert the new values into the new array)
+  - Sort from least to greatest
+*/
+
 // Brute Force Solution
 // -----
 // function make_squares(arr) {
