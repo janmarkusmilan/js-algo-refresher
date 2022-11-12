@@ -6,6 +6,12 @@ First Thoughts (Brute Force):
   - Loop through the array
   - Square the input after each iteration (if we create a new array, then just insert the new values into the new array)
   - Sort from least to greatest
+
+Second Thoughts (Two Pointer):
+  - Make an array and fill with some arbitrary number
+  - Define two pointers at beginning and end
+  - Get the square at each value the pointers are on
+  - On some condition, we pick the most suitable square and insert into the array
 */
 
 // Brute Force Solution
