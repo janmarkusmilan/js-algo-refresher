@@ -20,4 +20,24 @@ return the min
 
 function smallest_subarray_with_given_sum(s, arr) {
   // TODO: Write code here
+  let sum = 0;
+  let min = arr.length + 1;
+
+  let leftPtr = 0;
+  for (let rightPtr = 0; rightPtr < arr.length; rightPtr++) {
+    sum += arr[rightPtr];
+
+    while (sum >= s) {
+      min = Math.min(min, rightPtr - leftPtr + 1);
+      sum -= arr[leftPtr];
+
+      leftPtr++;
+    }
+  }
+
+  if (min === arr.length + 1) {
+    return 0;
+  }
+
+  return min;
 }
