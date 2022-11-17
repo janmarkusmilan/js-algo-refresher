@@ -49,3 +49,28 @@ function smallest_subarray_with_given_sum(s, arr) {
 
   return min;
 }
+
+console.log(
+  `Smallest subarray length: ${smallest_subarray_with_given_sum(
+    7,
+    [2, 1, 5, 2, 3, 2]
+  )}`
+);
+console.log(
+  `Smallest subarray length: ${smallest_subarray_with_given_sum(
+    7,
+    [2, 1, 5, 2, 8]
+  )}`
+);
+console.log(
+  `Smallest subarray length: ${smallest_subarray_with_given_sum(
+    8,
+    [3, 4, 1, 1, 6]
+  )}`
+);
+console.log(
+  `Smallest subarray length: ${smallest_subarray_with_given_sum(
+    100,
+    [3, 4, 1, 1, 6]
+  )}`
+);
