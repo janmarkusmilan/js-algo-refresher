@@ -13,6 +13,15 @@ Loop (forms a window):
     slide window
   update length to max
 return the max
+
+'araaci'
+{}
+Iteration 1: {'a': 1}
+Iteration 2: {'a': 1, 'r': 1}
+Iteration 3: {'a': 2, 'r': 1}
+Iteration 4: {'a': 3, 'r': 1}
+Iteration 5: {'a': 3, 'r': 1, 'c': 1}
+Iteration 6: {'a': 3, 'r': 1, 'c': 1, 'i': 1}
 */
 
 function longest_substring_with_k_distinct(str, k) {
