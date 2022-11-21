@@ -60,3 +60,22 @@ function longest_substring_with_k_distinct(str, k) {
 
   return max;
 }
+
+console.log(
+  `Length of the longest substring: ${longest_substring_with_k_distinct(
+    "araaci",
+    2
+  )}`
+);
+console.log(
+  `Length of the longest substring: ${longest_substring_with_k_distinct(
+    "araaci",
+    1
+  )}`
+);
+console.log(
+  `Length of the longest substring: ${longest_substring_with_k_distinct(
+    "cbbebi",
+    3
+  )}`
+);
