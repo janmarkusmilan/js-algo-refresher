@@ -29,22 +29,32 @@ function longest_substring_with_k_distinct(str, k) {
   let max = 0;
   const charMap = {};
 
+  // Form a 'window' using two pointers over a portion of the data
   let leftPtr = 0;
   for (let rightPtr = 0; rightPtr < str.length; rightPtr++) {
+    // Get the current char and check if it is in the hashmap (will be undefined or null if it isn't)
     const currentChar = charMap[str[rightPtr]];
 
+    // If it is present, increment the value by 1, else add it to the hashmap
     if (currentChar >= 0) {
       charMap[str[rightPtr]]++;
     } else {
       charMap[str[rightPtr]] = 1;
     }
 
+    // If the occurrence (value) of the current char is greater than k, slide the window over
     while (charMap[str[rightPtr]] > k) {
+      // Get the left-most char in the window
       const leftChar = str[leftPtr];
+
+      // Decrement the value of the char in the hashmap by 1
       charMap[leftChar]--;
+
+      // Increment the left pointer by 1 (update the beginning position of the window)
       leftPtr++;
     }
 
+    // Keep track of the max of each iteration (window size will increase at the end of each iteration)
     max = Math.max(max, rightPtr - leftPtr + 1);
   }
 
