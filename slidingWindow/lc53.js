@@ -41,3 +41,17 @@ console.log(
     [2, 3, 4, 1, 5]
   )}`
 );
+
+// Brute Force / Naive Approach
+// -----
+// let maxSum = 0,
+// windowSum = 0;
+
+// for (i = 0; i < arr.length - k + 1; i++) {
+//   windowSum = 0;
+//   for (j = i; j < i + k; j++) {
+//     windowSum += arr[j];
+//   }
+//   maxSum = Math.max(maxSum, windowSum);
+// }
+// return maxSum;
