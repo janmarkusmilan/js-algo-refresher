@@ -8,3 +8,7 @@ class Node {
     this.next = next;
   }
 }
+
+const has_cycle = function (head) {
+  // TODO: Write your code here
+};
