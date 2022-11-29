@@ -49,3 +49,19 @@ console.log(`LinkedList has cycle: ${has_cycle(head)}`);
 
 head.next.next.next.next.next.next = head.next.next.next;
 console.log(`LinkedList has cycle: ${has_cycle(head)}`);
+
+// Solution
+// -----
+// function has_cycle(head) {
+//   let slow = head,
+//     fast = head;
+//   while (fast !== null && fast.next !== null) {
+//     fast = fast.next.next;
+//     slow = slow.next;
+//     if (slow === fast) {
+//       return true; // found the cycle
+//     }
+//   }
+//   return false;
+// }
+// -----
