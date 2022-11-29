@@ -11,6 +11,29 @@ class Node {
 
 const has_cycle = function (head) {
   // TODO: Write your code here
+  if (!head) {
+    return false;
+  }
+
+  let tortoise = head;
+  let hare = head;
+
+  while (true) {
+    tortoise = tortoise.next;
+    hare = hare.next;
+
+    if (hare === null || hare.next === null) {
+      return false;
+    } else {
+      hare = hare.next;
+    }
+
+    if (tortoise === hare) {
+      break;
+    }
+  }
+
+  return true;
 };
 
 head = new Node(1);
