@@ -8,3 +8,7 @@ class Node {
     this.next = next;
   }
 }
+
+const find_cycle_start = function (head) {
+  // TODO: Write your code here
+};
