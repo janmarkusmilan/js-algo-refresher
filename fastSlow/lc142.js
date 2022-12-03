@@ -15,6 +15,22 @@ Tortoise and Hare Algorithm:
   Return head
 */
 
+/*
+// Brute Force Solution using Sets (Time: O(n), Space: O(n))
+  let currentNode = head;
+  const seenNodes = new Set(); // The .has() method is O(1)
+  
+  // Loop until the current node has already been stored in the set
+  while (!seenNodes.has(currentNode)) {
+    if (currentNode === null || currentNode.next === null ) {
+      return null; // There is a tail, so no cycle
+    }
+    seenNodes.add(currentNode);
+    currentNode = currentNode.next;
+  }
+  return currentNode;
+*/
+
 class Node {
   constructor(value, next = null) {
     this.value = value;
