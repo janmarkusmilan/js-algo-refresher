@@ -19,7 +19,7 @@ Tortoise and Hare Algorithm:
 // Brute Force Solution using Sets (Time: O(n), Space: O(n))
   let currentNode = head;
   const seenNodes = new Set(); // The .has() method is O(1)
-  
+
   // Loop until the current node has already been stored in the set
   while (!seenNodes.has(currentNode)) {
     if (currentNode === null || currentNode.next === null ) {
@@ -40,6 +40,42 @@ class Node {
 
 const find_cycle_start = function (head) {
   // TODO: Write your code here
+  if (!head) {
+    return head;
+  }
+
+  // Use Floyd's Tortoise & Hare Algorithm to check if we have a cycle
+  let tortoise = head;
+  let hare = head;
+
+  // Keep looping until we find one of our two cases
+  while (true) {
+    tortoise = tortoise.next;
+    hare = hare.next;
+
+    if (hare === null || hare.next === null) {
+      return null; // No cycle
+    } else {
+      hare = hare.next; // Increment hare by one more step (hare moves at 2)
+    }
+
+    // If they are pointing at the same list node
+    if (tortoise === hare) {
+      break;
+    }
+  }
+
+  // Instantiate two pointers that will traverse the cycle to find the list node that starts the cycle
+  // This is also a magical math property
+  let ptr1 = head;
+  let ptr2 = tortoise;
+
+  while (ptr1 !== ptr2) {
+    ptr1 = ptr1.next;
+    ptr2 = ptr2.next;
+  }
+
+  return ptr1;
 };
 
 head = new Node(1);
