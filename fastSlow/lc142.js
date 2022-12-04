@@ -25,9 +25,11 @@ Tortoise and Hare Algorithm:
     if (currentNode === null || currentNode.next === null ) {
       return null; // There is a tail, so no cycle
     }
+    
     seenNodes.add(currentNode);
     currentNode = currentNode.next;
   }
+
   return currentNode;
 */
 
