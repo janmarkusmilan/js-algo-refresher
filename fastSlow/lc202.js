@@ -15,6 +15,7 @@ Essentials (according to logic above):
   4. Add the numbers together (use the .reduce method)
 */
 
+// Brute Force (Time: O(n^2), Space: O(n))
 const find_happy_number = function (num) {
   // TODO: Write your code here
   let newNum = num;
