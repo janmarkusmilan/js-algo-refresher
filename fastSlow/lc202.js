@@ -17,6 +17,23 @@ Essentials (according to logic above):
 
 const find_happy_number = function (num) {
   // TODO: Write your code here
+  let newNum = num;
+  let seenNums = new Set();
+
+  while (!seenNums.has(newNum)) {
+    seenNums.add(newNum);
+    newNum = newNum
+      .toString()
+      .split("")
+      .map((a) => (a = a * a))
+      .reduce((a, b) => a + b, 0);
+
+    if (newNum === 1) {
+      return true;
+    }
+  }
+
+  return false;
 };
 
 console.log(`${find_happy_number(23)}`);
