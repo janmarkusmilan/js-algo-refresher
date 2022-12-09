@@ -64,3 +64,11 @@ console.log(`${find_happy_number(12)}`);
 //   }
 //   return sum;
 // }
+
+// -----
+
+// Time Complexity #
+// The time complexity of the algorithm is difficult to determine. However we know the fact that all unhappy numbers eventually get stuck in the cycle: 4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4
+
+// Space Complexity #
+// The algorithm runs in constant space O(1).
