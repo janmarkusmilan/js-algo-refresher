@@ -10,3 +10,7 @@ class Node {
     this.next = next;
   }
 }
+
+const find_middle_of_linked_list = function (head) {
+  // TODO: Write your code here
+};
