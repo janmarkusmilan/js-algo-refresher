@@ -13,6 +13,19 @@ class Node {
 
 const find_middle_of_linked_list = function (head) {
   // TODO: Write your code here
+  if (!head) {
+    return head;
+  }
+
+  let slowPtr = head;
+  let fastPtr = head;
+
+  while (fastPtr !== null && fastPtr.next !== null) {
+    slowPtr = slowPtr.next;
+    fastPtr = fastPtr.next.next;
+  }
+
+  return slowPtr;
 };
 
 head = new Node(1);
