@@ -46,3 +46,15 @@ console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
 
 head.next.next.next.next.next.next = new Node(7);
 console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
+
+// Solution
+// -----
+// function find_middle_of_linked_list(head) {
+//   let slow = head,
+//     fast = head;
+//   while ((fast !== null && fast.next !== null)) {
+//     slow = slow.next;
+//     fast = fast.next.next;
+//   }
+//   return slow;
+// }
