@@ -58,3 +58,11 @@ console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
 //   }
 //   return slow;
 // }
+
+// -----
+
+// Time complexity #
+// The above algorithm will have a time complexity of O(N) where ‘N’ is the number of nodes in the LinkedList.
+
+// Space complexity #
+// The algorithm runs in constant space O(1).
