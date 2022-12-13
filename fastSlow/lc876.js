@@ -4,6 +4,11 @@
 
 // If the total number of nodes in the LinkedList is even, return the second middle node.
 
+/*
+Fast & slow pointer
+Once the fast pointer reaches the end, the slow pointer will be at the middle node
+*/
+
 class Node {
   constructor(value, next = null) {
     this.value = value;
