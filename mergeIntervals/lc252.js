@@ -12,3 +12,7 @@ class Interval {
     process.stdout.write(`[${this.start}, ${this.end}]`);
   }
 }
+
+const can_attend_all_appointments = function (intervals) {
+  // TODO: Write your code here
+};
