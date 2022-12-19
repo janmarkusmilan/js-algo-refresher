@@ -2,6 +2,14 @@
 
 // Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
 
+/*
+Sort the array containing the intervals by the left number (start)
+Have a condition to check if two intervals overlap
+Condition: If the starting value of the next interval is between the two values of the previous interval
+If they overlap: return false
+If they don't overlap: return true
+*/
+
 class Interval {
   constructor(start, end) {
     this.start = start;
