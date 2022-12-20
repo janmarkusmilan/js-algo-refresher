@@ -77,3 +77,11 @@ console.log(
 //   }
 //   return true;
 // }
+
+// -----
+
+// Time complexity #
+// The time complexity of the above algorithm is O(N*logN), where ‘N’ is the total number of appointments. Though we are iterating the intervals only once, our algorithm will take O(N * logN) since we need to sort them in the beginning.
+
+// Space complexity #
+// The space complexity of the above algorithm will be O(N), which we need for sorting. For Java, Arrays.sort() uses Timsort, which needs O(N) space.
