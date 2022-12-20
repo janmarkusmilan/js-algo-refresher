@@ -60,3 +60,20 @@ console.log(
     new Interval(3, 6),
   ])}`
 );
+
+// Intended Solution
+// -----
+// function can_attend_all_appointments(intervals) {
+//   intervals.sort((a, b) => a.start - b.start);
+//   for (i = 1; i < intervals.length; i++) {
+//     if (intervals[i].start < intervals[i - 1].end) {
+//       // please note the comparison above, it is "<" and not "<="
+//       // while merging we needed "<=" comparison, as we will be merging the two
+//       // intervals having condition "intervals[i][start] === intervals[i - 1][end]" but
+//       // such intervals don't represent conflicting appointments as one starts right
+//       // after the other
+//       return false;
+//     }
+//   }
+//   return true;
+// }
