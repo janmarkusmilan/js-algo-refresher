@@ -12,3 +12,7 @@ class Interval {
     return "[" + this.start + ", " + this.end + "]";
   }
 }
+
+const merge = function (intervals) {
+  // TODO: Write your code here
+};
