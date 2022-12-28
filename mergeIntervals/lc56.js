@@ -35,6 +35,30 @@ class Interval {
 
 const merge = function (intervals) {
   // TODO: Write your code here
+  if (intervals.length <= 1) {
+    return intervals;
+  }
+
+  intervals.sort((a, b) => a.begin - b.begin);
+
+  merged = [];
+  let ptr1 = intervals[0].start;
+  let ptr2 = intervals[0].end;
+
+  for (let i = 1; i < intervals.length; i++) {
+    let interval = intervals[i];
+
+    if (interval.start >= ptr1 && interval.start <= ptr2) {
+      ptr2 = Math.max(ptr2, interval.end);
+    } else {
+      merged.push(new Interval(ptr1, ptr2));
+      ptr1 = interval.start;
+      ptr2 = interval.end;
+    }
+  }
+
+  merged.push(new Interval(ptr1, ptr2));
+  return merged;
 };
 
 merged_intervals = merge([
