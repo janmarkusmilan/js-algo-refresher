@@ -39,25 +39,28 @@ const merge = function (intervals) {
     return intervals;
   }
 
-  intervals.sort((a, b) => a.begin - b.begin);
+  intervals.sort((a, b) => a.begin - b.begin); // a[0] - b[0]
 
   merged = [];
-  let ptr1 = intervals[0].start;
-  let ptr2 = intervals[0].end;
+  let ptr1 = intervals[0].start; // intervals[0][0];
+  let ptr2 = intervals[0].end; // intervals[0][1];
 
   for (let i = 1; i < intervals.length; i++) {
     let interval = intervals[i];
 
+    // if (interval[0] >= ptr1 && interval[0] <= ptr2) {
     if (interval.start >= ptr1 && interval.start <= ptr2) {
-      ptr2 = Math.max(ptr2, interval.end);
+      // If there is overlap
+      ptr2 = Math.max(ptr2, interval.end); // Math.max(ptr2, interval[1]);
     } else {
-      merged.push(new Interval(ptr1, ptr2));
-      ptr1 = interval.start;
-      ptr2 = interval.end;
+      // If there is no overlap
+      merged.push(new Interval(ptr1, ptr2)); // merged.push([ptr1, ptr2]);
+      ptr1 = interval.start; // interval[0];
+      ptr2 = interval.end; // interval[1];
     }
   }
 
-  merged.push(new Interval(ptr1, ptr2));
+  merged.push(new Interval(ptr1, ptr2)); // merged.push([ptr1, ptr2]);
   return merged;
 };
 
