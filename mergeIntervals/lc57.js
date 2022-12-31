@@ -12,3 +12,9 @@ class Interval {
     process.stdout.write(`[${this.start}, ${this.end}]`);
   }
 }
+
+const insert = function (intervals, new_interval) {
+  let merged = [];
+  // TODO: Write your code here
+  return merged;
+};
