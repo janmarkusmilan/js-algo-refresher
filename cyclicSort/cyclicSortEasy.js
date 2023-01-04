@@ -22,6 +22,22 @@ Steps:
 
 const cyclic_sort = function (nums) {
   // TODO: Write your code here
+  let startIdx = 0;
+
+  while (startIdx < nums.length) {
+    if (nums[startIdx] !== startIdx + 1) {
+      const swapIdx = nums[startIdx] - 1;
+      if (nums[startIdx] !== nums[swapIdx]) {
+        [nums[startIdx], nums[swapIdx]] = [nums[swapIdx], nums[startIdx]];
+      } else {
+        startIdx++;
+      }
+    } else {
+      startIdx++;
+    }
+  }
+
+  return nums;
 };
 
 console.log(`${cyclic_sort([3, 1, 5, 4, 2])}`);
