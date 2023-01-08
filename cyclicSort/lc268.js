@@ -6,3 +6,9 @@
 const find_missing_number = function (nums) {
   // TODO: Write your code here
 };
+
+console.log(find_missing_number([4, 0, 3, 1])); // 2
+console.log(find_missing_number([8, 3, 5, 2, 4, 6, 0, 1])); // 7
+console.log(find_missing_number([])); // 0
+console.log(find_missing_number([1])); // 0
+console.log(find_missing_number([0])); // 1
