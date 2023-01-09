@@ -30,7 +30,7 @@ Cyclic sort:
     5. Check for duplicates (not necessary since every number is distinct)
     6. Swap using destructuring
     7. Increment startIdx
-    
+
 [1, 0, 3, 4]
 Ideal: [0, 1, 2, 3]
 Cyclic Sort: [0, 1, 4, 3]
@@ -38,6 +38,27 @@ Cyclic Sort: [0, 1, 4, 3]
 
 const find_missing_number = function (nums) {
   // TODO: Write your code here
+  let startIdx = 0;
+  while (startIdx < nums.length) {
+    if (nums[startIdx] !== startIdx) {
+      const swapIdx = nums[startIdx];
+      if (nums[startIdx] < nums.length) {
+        [nums[startIdx], nums[swapIdx]] = [nums[swapIdx], nums[startIdx]];
+      } else {
+        startIdx++;
+      }
+    } else {
+      startIdx++;
+    }
+  }
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== i) {
+      return i;
+    }
+  }
+
+  return nums.length;
 };
 
 console.log(find_missing_number([4, 0, 3, 1])); // 2
