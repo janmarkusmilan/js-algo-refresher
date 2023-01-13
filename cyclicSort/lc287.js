@@ -6,3 +6,7 @@
 const find_duplicate = function (nums) {
   // TODO: Write your code here
 };
+
+console.log(find_duplicate([1, 4, 4, 3, 2])); // 4
+console.log(find_duplicate([2, 1, 3, 3, 5, 4])); // 3
+console.log(find_duplicate([2, 4, 1, 4, 4])); // 4
