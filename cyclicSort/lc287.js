@@ -36,6 +36,21 @@ Cyclic Sort pseudo-code:
 
 const find_duplicate = function (nums) {
   // TODO: Write your code here
+  let startIdx = 0;
+  while (startIdx < nums.length) {
+    if (nums[startIdx] !== startIdx + 1) {
+      const swapIdx = nums[startIdx] - 1;
+      if (nums[startIdx] !== nums[swapIdx]) {
+        [nums[startIdx], nums[swapIdx]] = [nums[swapIdx], nums[startIdx]];
+      } else {
+        return nums[startIdx];
+      }
+    } else {
+      startIdx++;
+    }
+  }
+
+  return -1;
 };
 
 console.log(find_duplicate([1, 4, 4, 3, 2])); // 4
